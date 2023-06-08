@@ -1,0 +1,11 @@
+.header{
+    background: rgba(0, 0, 0, 0.9);
+border: 1px solid #000000;
+padding: 2rem;
+}
+
+.nav{
+    justify-content: space-between;
+    display: flex;
+
+}
