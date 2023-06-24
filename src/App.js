@@ -12,9 +12,8 @@ function App() {
     <BrowserRouter>
       <Header></Header>
          < Routes>
-             <Route path='/' element={<PaginaPadrao/>}>
-               <Route index element={<Inicio/>}/>
-             </Route>
+             <Route index path='/' element={<Inicio/>}/>
+              <Route path='/adicionar-novo' element={<Inicio/>}/>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
