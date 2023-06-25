@@ -1,10 +1,10 @@
 import Slider from "react-slick"
-import MultipleItems from "../slider/Slider"
 import Categorias from '../../../dados/videos.json'
 import Videos from '../../../dados/videos.json'
 import { VideoCard } from "../videoCard/VideoCard"
 import styled from "@emotion/styled"
 import { Typography } from "@mui/material"
+import { MultipleItems } from "../slider/Slider"
 
 
 const ListaVideos = Videos.videos
@@ -13,21 +13,12 @@ export const Carrousel = ()=>{
     return(
     <>
     {CategoriasVideos.map((categoria)=>{
-        let filter = ListaVideos.filter((video)=> video.categoria_id === categoria.id)
-        console.log(categoria.nome)
-        console.log(filter)
         return (
             <section className={categoria}>
                 <Typography variant="h2" >{categoria.nome}</Typography>
-            <MultipleItems>
-                   {filter.map((video)=>{
-                    return(
-                        <>
-                        <VideoCard  src={video.url} title={video.nome}></VideoCard>
-                        </>
-                    )
-                   })}
-                        </MultipleItems>
+                 <MultipleItems categoria={categoria} videos={ListaVideos.filter(video => categoria.id === video.categoria_id)}>
+
+                 </MultipleItems>
                         
                </section>
         

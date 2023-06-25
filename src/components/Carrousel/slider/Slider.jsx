@@ -6,26 +6,27 @@ import styles from './Slider.module.css'
 import { Link } from "react-router-dom";
 import { VideoCard } from "../videoCard/VideoCard";
 import './Slider.module.css'
+import Videos from "../../../dados/videos.json"
+import { render } from "react-dom";
+const ListaVideos = Videos.videos
 
-
-export default class MultipleItems extends Component {
-  render() {
+export const MultipleItems = ({children,videos,categoria})=>{
+  console.log(categoria.nome)
+  console.log(videos)
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3
-    };
+    }
 
-    return (
-      <div className='slides'>
+    return(
+        <div className='slides'>
         <Slider {...settings}>
-          {this.props.children}
+          {videos.map(video => <li key={video.id}><VideoCard video={video}></VideoCard></li>)}
         </Slider>
       </div>
-    );
-  }
-}
+  )}
 
 
