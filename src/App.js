@@ -5,15 +5,18 @@ import './GlobalStyle.css'
 import PaginaPadrao from './components/PaginaPadrao/Padrao';
 import { Footer } from './components/Footer/Footer';
 import { Inicio } from './paginas/Inicio/Inicio';
+import { NovoVideo } from './paginas/novoVideo/NovoVideo';
 
 function App() {
   return (
 
     <BrowserRouter>
       <Header></Header>
-         < Routes>
+         <Routes>
              <Route index path='/' element={<Inicio/>}/>
-              <Route path='/adicionar-novo' element={<Inicio/>}/>
+      </Routes>
+      <Routes>
+            <Route path='/adicionar-novo' element={<NovoVideo/>}/>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

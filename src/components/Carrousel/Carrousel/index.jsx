@@ -16,10 +16,7 @@ export const Carrousel = ()=>{
         return (
             <section className={categoria}>
                 <Typography variant="h2" >{categoria.nome}</Typography>
-                 <MultipleItems categoria={categoria} videos={ListaVideos.filter(video => categoria.id === video.categoria_id)}>
-
-                 </MultipleItems>
-                        
+                 <MultipleItems categoria={categoria} videos={ListaVideos.filter(video => categoria.id === video.categoria_id)}/>           
                </section>
         
         )

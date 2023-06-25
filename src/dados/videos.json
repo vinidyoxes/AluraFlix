@@ -28,7 +28,15 @@
         "descricao": "Learn how to use the OpenAI API to create five projects, including a ChatGPT clone, a DALL-E Image Creator, and a SQL Generator. This is a dive deep into the world of the OpenAI API, exploring its diverse capabilities and potential applications.",
         "categoria_id": 4,
         "url":"https://www.youtube.com/embed/uRQH2CFvedY"
+      },
+      {
+        "id": 5,
+        "nome": "Curso React: Entendendo o JSX - #03",
+        "descricao": "Neste vídeo vamos conhecer um recurso muito utilizado no #React o #JSX",
+        "categoria_id": 1,
+        "url":"https://www.youtube.com/embed/9iKNxnFJY_Q"
       }
+      
     ],
     "categorias": [
       {
